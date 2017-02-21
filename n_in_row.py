@@ -18,7 +18,7 @@ class Board(object):
     def __init__(self, width=4, height=4, n_in_row=4):
         self.width = width
         self.height = height
-        self.states = {} # board states, key:(player, move), value: piece type
+        self.states = {} # board states, key:move, value: piece type
         self.n_in_row = n_in_row # need how many pieces in a row to win
 
     def init_board(self):
