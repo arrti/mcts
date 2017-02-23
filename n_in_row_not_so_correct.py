@@ -2,6 +2,10 @@
 author: arrti
 github: https://github.com/arrti
 blog:   http://www.cnblogs.com/xmwd
+
+This implement of MC and UCT was not completely right,
+but it can work, please see README.
+Welcome to discuss with me.
 """ 
 
 import copy
@@ -15,11 +19,11 @@ class Board(object):
     board for game
     """
 
-    def __init__(self, width=4, height=4, n_in_row=4):
-        self.width = width
-        self.height = height
+    def __init__(self, **kwargs):
+        self.width = int(kwargs.get('width', 8))
+        self.height = int(kwargs.get('height', 8))
         self.states = {} # board states, key:move, value: piece type
-        self.n_in_row = n_in_row # need how many pieces in a row to win
+        self.n_in_row = int(kwargs.get('n_in_row', 5)) # need how many pieces in a row to win
 
     def init_board(self):
         if self.width < self.n_in_row or self.height < self.n_in_row:
@@ -359,7 +363,7 @@ class Game(object):
 def run():
     n = 5
     try:
-        board = Board(8, 8, n)
+        board = Board(width=8, height=8, n_in_row=n)
         game = Game(board, n_in_row=n, time=1)
         game.start()
     except KeyboardInterrupt:
