@@ -1,5 +1,5 @@
 # mcts
-An Python N-in-Row game based on Monte Carlo Tree Search and UCT RAVE.  
+An Python N-in-Row game based on Monte Carlo Tree Search and UCT RAVE.    
 一个Python实现的使用蒙特卡洛搜索树（MCTS）和UCT RAVE的"N-in-Row"类游戏。
 
 中文说明可见[博客](http://www.cnblogs.com/xmwd/p/python_game_based_on_MCTS_and_UCB.html)
