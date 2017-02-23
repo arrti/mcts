@@ -304,6 +304,7 @@ class Game(object):
         players[p2] = human
         turn = [p1, p2]
         shuffle(turn)
+        self.graphic(self.board, human, ai)
         while(1):
             p = turn.pop(0)
             turn.append(p)
